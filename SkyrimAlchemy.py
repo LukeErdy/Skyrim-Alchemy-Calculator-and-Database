@@ -118,7 +118,7 @@ class Alchemy:
 		self.choose()
 	
 
-	def choose(self):
+	def choose(self): # first menu
 		entry = input('What would you like to do?\n1. Learn about an ingredient\n2. Find ingredients by entering effects\n3. Find out what you can make from a list of ingredients\n\nEnter a number, 1-3: ')
 		if entry == '1':
 			self.search_ingredient()
@@ -131,7 +131,7 @@ class Alchemy:
 			self.choose()
 
 
-	def search_ingredient(self):
+	def search_ingredient(self): # retrieves ingredient effects and lists ingredients that share effects
 		entry = input('\nEnter an ingredient: ')
 		for ingredient in self.ingredient_array:
 			if ingredient[0] == entry.lower():
@@ -146,7 +146,7 @@ class Alchemy:
 		self.choose()
 
 
-	def search_effects(self):
+	def search_effects(self): # retrieves ingredients that have ALL the effects entered
 		entry = input('\nEnter an effect or a list of effects (use commas to separate effects, for example: fortify destruction, regenerate magicka): ')
 		entry = entry.lower().split(', ')
 		print('\nThe following ingredients possess the effect(s) ' + str(entry) + '\n')
@@ -157,7 +157,7 @@ class Alchemy:
 		self.choose()
 
 
-	def find_potions(self):
+	def find_potions(self): # takes the ingredients entered and delineates how it relates to every other ingredient in the list (if it shares one or more effects)
 		entry = input('\nEnter what you have to see what you can make (use commas to separate ingredients, for example: lavender, salt pile): ')
 		entry = entry.lower().split(', ')
 		ingredients = []
