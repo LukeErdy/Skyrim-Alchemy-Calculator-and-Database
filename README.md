@@ -1,5 +1,5 @@
 # Skyrim-Alchemy-Calculator-and-Database
-A simple program that streamlines the process of making potions in TES V: Skyrim.
+A program that streamlines the process of making potions in TES V: Skyrim.
 Using SACD is much faster and easier than looking over spreadsheets or scrolling through the wiki.
 
 With SACD, you can:
